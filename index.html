@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+
+    <!-- ========== SEO ========== -->
+    <title>Adrian ZHAO | AI应用 / LLM落地开发工程师 | 个人简历网站</title>
+    <meta name="description" content="Adrian ZHAO，AI应用/LLM落地开发工程师。2年Python开发经验，熟悉C++网关与FastAPI微服务，擅长LangGraph、RAG、Agent系统架构，能将大模型能力快速落地到业务场景。">
+    <meta name="keywords" content="Adrian ZHAO, Adrian, Python, AI应用, LLM, LangGraph, RAG, Agent, FastAPI, Flask, 简历">
+    <meta name="author" content="Adrian ZHAO">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://guojiezhao.pythonanywhere.com/">
+
+    <!-- 微信 / 移动端兼容 -->
+    <meta name="format-detection" content="telephone=yes, email=yes, address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- ========== Open Graph（Facebook / 微信 / LinkedIn） ========== -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Adrian ZHAO 个人简历">
+    <meta property="og:title" content="Adrian ZHAO | AI应用 / LLM落地开发工程师">
+    <meta property="og:description" content="2年Python开发经验，熟悉C++网关与FastAPI微服务，擅长LangGraph、RAG、Agent系统架构，能将大模型能力快速落地到业务场景。">
+    <meta property="og:url" content="https://guojiezhao.pythonanywhere.com/">
+    <meta property="og:image" content="https://guojiezhao.pythonanywhere.com/static/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Adrian ZHAO — AI应用 / LLM落地开发工程师">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- ========== Twitter Card ========== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adrian ZHAO | AI应用 / LLM落地开发工程师">
+    <meta name="twitter:description" content="2年Python开发经验，熟悉C++网关与FastAPI微服务，擅长LangGraph、RAG、Agent系统架构。">
+    <meta name="twitter:image" content="https://guojiezhao.pythonanywhere.com/static/img/og-image.png">
+    <meta name="twitter:image:alt" content="Adrian ZHAO — AI应用 / LLM落地开发工程师">
+
+    <!-- 深色模式 -->
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F2F2F7">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
+
+    <!-- 内联 SVG favicon（无需外部文件） -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23007AFF'/%3E%3Ctext x='50' y='68' font-size='52' font-family='-apple-system,sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- ========== 毛玻璃导航栏 ========== -->
+    <nav class="nav-bar" id="navBar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">A</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">关于</a>
+                <a href="#skills" class="nav-link">技能</a>
+                <a href="#experience" class="nav-link">经历</a>
+                <a href="#projects" class="nav-link">项目</a>
+                <a href="#education" class="nav-link">教育</a>
+                <a href="#contact" class="nav-link">联系</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="切换深色模式" title="切换深浅色模式">
+                <!-- 太阳（浅色模式时显示，点击切深色） -->
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                <!-- 月亮（深色模式时显示，点击切浅色） -->
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- ========== 1. Hero 首屏 ========== -->
+        <section class="hero" id="hero">
+            <div class="hero-avatar" aria-hidden="true">A</div>
+            <h1 class="hero-name">Adrian ZHAO</h1>
+            <p class="hero-title">AI应用 / LLM落地开发工程师</p>
+            <p class="hero-tagline">2年Python开发 · LangGraph · RAG · Agent 系统架构</p>
+
+            <div class="hero-meta">
+                <span class="hero-meta-item">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    咸阳
+                </span>
+                <span class="hero-meta-dot" aria-hidden="true">·</span>
+                <span class="hero-meta-item">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.7zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                    2年经验
+                </span>
+            </div>
+
+            <div class="hero-actions">
+                <a href="mailto:cookiecool811@outlook.com" class="btn btn-primary">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                    联系我
+                </a>
+                <a href="{{ url_for('static', filename='pdf/' + resume_pdf) }}" download class="btn btn-secondary">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    PDF 简历
+                </a>
+            </div>
+        </section>
+
+        <!-- ========== 2. 关于我 ========== -->
+        <section class="section" id="about">
+            <h2 class="section-title">关于我</h2>
+            <div class="card">
+                <p class="about-text">
+                    熟悉 <strong>C++ / Python 全栈开发</strong>与 <strong>LLM 应用落地</strong>。擅长 Agent 系统的架构设计与开发，
+                    具备 <strong>C++ 网关 + Python（FastAPI）微服务</strong>架构实战经验；熟悉 LangGraph 工作流、RAG 混合检索技术。
+                    具备从需求分析、架构设计到编码测试的完整项目能力，能快速将大模型能力与业务场景结合。
+                </p>
+            </div>
+        </section>
+
+        <!-- ========== 3. 核心技能 ========== -->
+        <section class="section" id="skills">
+            <h2 class="section-title">核心技能</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">AI / LLM</h3>
+                    <div class="skill-tags">
+                        <span class="tag">LangGraph</span>
+                        <span class="tag">RAG 混合检索</span>
+                        <span class="tag">Agent 工作流</span>
+                        <span class="tag">大模型集成</span>
+                        <span class="tag">Embedding 向量检索</span>
+                        <span class="tag">Prompt 工程</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">后端开发</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">C++ (cpp-httplib)</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">Alembic 迁移</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">工程化 & 其他</h3>
+                    <div class="skill-tags">
+                        <span class="tag">OpenCV 人脸识别</span>
+                        <span class="tag">高德地图 API</span>
+                        <span class="tag">Prometheus + Grafana</span>
+                        <span class="tag">朴素贝叶斯分类</span>
+                        <span class="tag">规则引擎</span>
+                        <span class="tag">Android 客户端</span>
+                        <span class="tag">熔断器 / LRU 缓存</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 4. 工作经历 ========== -->
+        <section class="section" id="experience">
+            <h2 class="section-title">工作经历</h2>
+
+            <article class="card timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <h3 class="job-company">西安优浩物流有限公司</h3>
+                        <p class="job-role">数据仓储工程师</p>
+                    </div>
+                    <span class="job-date">2026.01 — 2026.04</span>
+                </div>
+                <div class="job-body">
+                    <p class="job-desc">
+                        面向中小仓储企业的智能仓储管理系统，覆盖入库、出库、库存、订单、采购、财务等完整业务模块，支持多用户协作与数据共享。
+                    </p>
+                    <ul class="job-highlights">
+                        <li>创新性引入 <strong>LangGraph Agent 动态工作流</strong>与 <strong>RAG 混合检索</strong>技术，实现仓储业务智能问答与自动化决策辅助</li>
+                        <li>采用 <strong>C++ 网关（cpp-httplib）+ Python 微服务（FastAPI）</strong>架构：C++ 负责静态文件托管与 API 反向代理（熔断器、连接复用、LRU 缓存、路径穿越防护），Python 负责全部业务逻辑与 AI Agent</li>
+                        <li>技术栈：MySQL 8.0（Alembic 迁移）、Redis、智谱 GLM-4-Flash、embedding-3 向量模型、高德地图 API、OpenCV 人脸识别、Prometheus + Grafana 监控</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="card timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <h3 class="job-company">西安星月云天电子科技有限公司</h3>
+                        <p class="job-role">后端开发 / Android 客户端</p>
+                    </div>
+                    <span class="job-date">2025.01 — 2025.09</span>
+                </div>
+                <div class="job-body">
+                    <p class="job-desc">
+                        参与 AI 应用的 Android 客户端与后端开发，从 0 到 1 搭建服务端与移动端业务模块。
+                    </p>
+                    <ul class="job-highlights">
+                        <li>基于 <strong>Python Flask</strong> 搭建服务端，设计用户、账单、预算等业务数据表，实现会话鉴权与多用户数据隔离</li>
+                        <li>设计<strong>离线文本解析栈</strong>，结合规则引擎与朴素贝叶斯分类器，降低大模型调用开销，保障断网环境下收支识别可用</li>
+                        <li>负责移动端功能对接，完成账单录入、图表统计、报表导出、团体账单共享等业务模块联调，优化接口响应与本地数据存储</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <!-- ========== 5. 项目经历 ========== -->
+        <section class="section" id="projects">
+            <h2 class="section-title">项目经历</h2>
+
+            <article class="card project-card">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-name">青语 AI 账目</h3>
+                        <p class="project-role">全栈开发者</p>
+                    </div>
+                    <span class="project-date">2025.06 — 2025.12</span>
+                </div>
+                <p class="project-desc">
+                    AI 智能记账应用，已上线 Android 客户端与 Web 网站。用户用一句话描述日常收支，系统自动识别金额、分类与收支类型并完成多笔账单录入。
+                </p>
+                <ul class="job-highlights">
+                    <li>后端基于 <strong>Python Flask</strong>，设计用户、账单、预算、验证码、好友关系等数据表，通过会话鉴权与数据过滤实现多用户隔离</li>
+                    <li>设计<strong>多级离线解析栈</strong>（文本规范化 + 规则引擎 + 权重评分 + 朴素贝叶斯个性化分类器 + 置信度校准），减少大模型调用、断网可用</li>
+                    <li>提供图表分析、预算管理、Excel 报表导出、本地天气、多用户数据隔离及好友团体账单共享等功能</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://adrian811.pythonanywhere.com/" target="_blank" rel="noopener" class="project-link">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        在线体验
+                    </a>
+                </div>
+            </article>
+        </section>
+
+        <!-- ========== 6. 教育背景 ========== -->
+        <section class="section" id="education">
+            <h2 class="section-title">教育背景</h2>
+            <article class="card">
+                <div class="timeline-header">
+                    <div>
+                        <h3 class="job-company">咸阳师范学院</h3>
+                        <p class="job-role">计算机科学与技术 · 本科</p>
+                    </div>
+                    <span class="job-date">2023.09 — 2027.06</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- ========== 7. 证书 & 奖项 ========== -->
+        <section class="section" id="certificates">
+            <h2 class="section-title">证书 & 奖项</h2>
+            <div class="card">
+                <ul class="cert-list">
+                    <li class="cert-item">
+                        <div class="cert-info">
+                            <span class="cert-name">Fortinet NSE3 网络安全专家三级认证</span>
+                            <span class="cert-desc">FortiGate 防火墙运维</span>
+                        </div>
+                        <img class="cert-thumb" src="{{ url_for('static', filename='img/certificates/nse3.jpg') }}" alt="NSE3 证书" loading="lazy" onclick="openLightbox(this.src, this.alt)" onerror="this.style.display='none'">
+                    </li>
+                    <li class="cert-item">
+                        <div class="cert-info">
+                            <span class="cert-name">Fortinet NSE2 网络安全认证</span>
+                            <span class="cert-desc">下一代防火墙基础</span>
+                        </div>
+                        <img class="cert-thumb" src="{{ url_for('static', filename='img/certificates/nse2.jpg') }}" alt="NSE2 证书" loading="lazy" onclick="openLightbox(this.src, this.alt)" onerror="this.style.display='none'">
+                    </li>
+                    <li class="cert-item">
+                        <div class="cert-info">
+                            <span class="cert-name">Fortinet NSE1 网络安全认证</span>
+                            <span class="cert-desc">云安全基础</span>
+                        </div>
+                        <img class="cert-thumb" src="{{ url_for('static', filename='img/certificates/nse1.jpg') }}" alt="NSE1 证书" loading="lazy" onclick="openLightbox(this.src, this.alt)" onerror="this.style.display='none'">
+                    </li>
+                    <li class="cert-item">
+                        <div class="cert-info">
+                            <span class="cert-name">华为 HarmonyOS 应用开发者基础认证</span>
+                        </div>
+                        <img class="cert-thumb" src="{{ url_for('static', filename='img/certificates/harmonyos.jpg') }}" alt="HarmonyOS 证书" loading="lazy" onclick="openLightbox(this.src, this.alt)" onerror="this.style.display='none'">
+                    </li>
+                    <li class="cert-item">
+                        <div class="cert-info">
+                            <span class="cert-name">创新创业大赛 一等奖</span>
+                        </div>
+                        <img class="cert-thumb" src="{{ url_for('static', filename='img/certificates/innovation.jpg') }}" alt="创新创业大赛一等奖" loading="lazy" onclick="openLightbox(this.src, this.alt)" onerror="this.style.display='none'">
+                    </li>
+                    <li class="cert-item">
+                        <div class="cert-info">
+                            <span class="cert-name">大学英语六级（CET-6）</span>
+                            <span class="cert-desc">普通话二级甲等</span>
+                        </div>
+                    </li>
+                    <li class="cert-item">
+                        <div class="cert-info">
+                            <span class="cert-name">微专业证书 · 全球化运营英语跨境电商与品牌出海</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========== 8. 联系方式 ========== -->
+        <section class="section" id="contact">
+            <h2 class="section-title">联系方式</h2>
+            <div class="card contact-card">
+                <a href="#" class="contact-item" id="copyEmail" data-email="cookiecool811@outlook.com">
+                    <span class="contact-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                    </span>
+                    <span class="contact-label">邮箱</span>
+                    <span class="contact-value">cookiecool811@outlook.com</span>
+                </a>
+                <div class="contact-divider"></div>
+                <a href="tel:17762139554" class="contact-item">
+                    <span class="contact-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </span>
+                    <span class="contact-label">电话</span>
+                    <span class="contact-value">17762139554</span>
+                </a>
+                <div class="contact-divider"></div>
+                <a href="https://github.com/cookiecool811" target="_blank" rel="noopener" class="contact-item">
+                    <span class="contact-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </span>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">@cookiecool811</span>
+                </a>
+                <div class="contact-divider"></div>
+                <a href="https://adrian811.pythonanywhere.com/" target="_blank" rel="noopener" class="contact-item">
+                    <span class="contact-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </span>
+                    <span class="contact-label">项目网站</span>
+                    <span class="contact-value">青语 AI 账目</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="footer">
+        <p>© 2026 Adrian ZHAO · 最后更新于 2026.10</p>
+    </footer>
+
+    <!-- 证书图片放大查看（Lightbox） -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" aria-label="关闭" role="button" tabindex="0">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+    <!-- iOS Toast 提示 -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <span class="toast-text" id="toastText">已复制</span>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop" aria-label="返回顶部" title="返回顶部">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
